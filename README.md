@@ -27,3 +27,7 @@ My children's names are:
 - 😄 Pronouns: she
 - ⚡ Fun fact: I can play guitar 
 
+    -TABLE OF CONTENTS-
+    1. Growth Mindset
+    2. Motivators
+    3. Intro
