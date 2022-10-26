@@ -28,9 +28,9 @@ My children's names are:
 - ⚡ Fun fact: I can play guitar 
 
 
-- [Table of Contents Read 2 CodersComputer](Read2CodersComputer.md)
-[Read 3 Commands](Read3GithubCommands.md)
-[Read 5 CSS](Read5CSS.md)
+- [Table of Contents Read 2 CodersComputer](102/Read2CodersComputer.md)
+[Read 3 Commands](102/Read3GithubCommands.md)
+[Read 5 CSS](102/Read5CSS.md)
 
 
-[Read1Notes](Read1Notes.md)
+[Read1Notes](102/Read1Notes.md)
