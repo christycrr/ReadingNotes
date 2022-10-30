@@ -1,0 +1,122 @@
+"Images in HTML
+There are other types of multimedia to consider, but it is logical to start with the humble <img> element used to embed a simple image in a webpage. In this article we'll look at how to use it in more depth, including basics, annotating it with captions using <figure>, and how it relates to CSS background images.
+
+Video and audio content
+Next, we'll look at how to use the HTML <video> and <audio> elements to embed video and audio on our pages, including basics, providing access to different file formats to different browsers, adding captions and subtitles, and how to add fallbacks for older browsers.
+
+From <object> to <iframe> — other embedding technologies
+At this point we'd like to take somewhat of a sideways step, looking at a couple of elements that allow you to embed a wide variety of content types into your webpages: the <iframe>, <embed> and <object> elements. <iframe>s are for embedding other web pages, and the other two allow you to embed external resources such as PDF files.
+
+Adding vector graphics to the Web
+Vector graphics can be very useful in certain situations. Unlike regular formats like PNG/JPG, they don't distort/pixelate when zoomed in — they can remain smooth when scaled. This article introduces you to what vector graphics are and how to include the popular SVG format in web pages.
+
+Responsive images
+In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices. Responsive images are just one part of responsive design, a future CSS topic for you to learn."
+-https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding
+
+
+"How do we put an image on a webpage?
+In order to put a simple image on a web page, we use the <img> element. This is a void element (meaning, it cannot have any child content and cannot have an end tag) that requires two attributes to be useful: src and alt. The src attribute contains a URL pointing to the image you want to embed in the page. As with thehref attribute for <a> elements, the src attribute can be a relative URL or an absolute URL. Without a src attribute, an img element has no image to load.
+
+The alt attribute is described below.
+
+Note: You should read A quick primer on URLs and paths to refresh your memory on relative and absolute URLs before continuing.
+
+So for example, if your image is called dinosaur.jpg, and it sits in the same directory as your HTML page, you could embed the image like so:
+
+<img src="dinosaur.jpg" alt="Dinosaur" />
+Copy to Clipboard
+If the image was in an images subdirectory, which was inside the same directory as the HTML page, then you'd embed it like this:
+
+<img src="images/dinosaur.jpg" alt="Dinosaur" />
+Copy to Clipboard
+And so on."
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+
+
+
+"Image file type and format guide
+In this guide, we'll cover the image file types generally supported by web browsers, and provide insights that will help you select the most appropriate formats to use for your site's imagery.
+
+Common image file types
+The image file formats that are most commonly used on the web are listed below.
+
+Abbreviation	File format	MIME type	File extension(s)	Summary
+APNG	Animated Portable Network Graphics	image/apng	.apng	Good choice for lossless animation sequences (GIF is less performant). AVIF and WebP have better performance but less broad browser support.
+Supported: Chrome, Edge, Firefox, Opera, Safari.
+AVIF	AV1 Image File Format	image/avif	.avif	
+Good choice for both images and animated images due to high performance and royalty free image format. It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc. Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the <picture> element).
+Supported: Chrome, Opera, Firefox (still images only: animated images not implemented).
+
+GIF	Graphics Interchange Format	image/gif	.gif	Good choice for simple images and animations. Prefer PNG for lossless and indexed still images, and consider WebP, AVIF or APNG for animation sequences.
+Supported: Chrome, Edge, Firefox, IE, Opera, Safari.
+JPEG	Joint Photographic Expert Group image	image/jpeg	.jpg, .jpeg, .jfif, .pjpeg, .pjp	
+Good choice for lossy compression of still images (currently the most popular). Prefer PNG when more precise reproduction of the image is required, or WebP/AVIF if both better reproduction and higher compression are required.
+Support: Chrome, Edge, Firefox, IE, Opera, Safari.
+
+PNG	Portable Network Graphics	image/png	.png	
+PNG is preferred over JPEG for more precise reproduction of source images, or when transparency is needed. WebP/AVIF provide even better compression and reproduction, but browser support is more limited.
+Support: Chrome, Edge, Firefox, IE, Opera, Safari.
+
+SVG	Scalable Vector Graphics	image/svg+xml	.svg	Vector image format; ideal for user interface elements, icons, diagrams, etc., that must be drawn accurately at different sizes.
+Support: Chrome, Edge, Firefox, IE, Opera, Safari.
+WebP	Web Picture format	image/webp	.webp	Excellent choice for both images and animated images. WebP offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc. AVIF offers slightly better compression, but is not quite as well-supported in browsers and does not support progressive rendering.
+Support: Chrome, Edge, Firefox, Opera, Safari
+Note: The older formats like PNG, JPEG, GIF have poor performance compared to newer formats like WebP and AVIF, but enjoy broader "historical" browser support. The newer image formats are seeing increasing popularity as browsers without support become increasingly irrelevant (i.e. have virtually zero market share)."
+-https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
+
+
+"CSS first steps
+CSS (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.
+
+CSS building blocks
+This module carries on where CSS first steps left off — now you've gained familiarity with the language and its syntax, and got some basic experience with using it, its time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have available, units, sizing, styling backgrounds and borders, debugging, and lots more.
+
+The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like text styling and CSS layout.
+
+CSS styling text
+With the basics of the CSS language covered, the next CSS topic for you to concentrate on is styling text — one of the most common things you'll do with CSS. Here we look at text styling fundamentals, including setting font, boldness, italics, line and letter spacing, drop shadows, and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
+
+CSS layout
+At this point, we've already looked at CSS fundamentals, how to style text, and how to style and manipulate the boxes that your content sits inside. Now it's time to look at how to place your boxes in the right place with respect to the viewport, and one another. We have covered the necessary prerequisites so we can now dive deep into CSS layout, looking at different display settings, modern layout tools like flexbox, CSS grid, and positioning, and some of the legacy techniques you might still want to know about.
+
+Solving common CSS problems
+Use CSS to solve common problems provides links to sections of content explaining how to use CSS to solve very common problems when creating a web page.
+
+From the beginning, you'll primarily apply colors to HTML elements and their backgrounds; change the size, shape, and position of elements; and add and define borders on elements. But there's not much you can't do once you have a solid understanding of even the basics of CSS. One of the best things about learning CSS is that once you know the fundamentals, usually you have a pretty good feel for what can and can't be done, even if you don't know how to do it yet!
+
+"CSS is weird""
+-https://developer.mozilla.org/en-US/docs/Learn/CSS
+
+
+"Applying color to HTML elements using CSS"
+-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Applying_color
+
+"Fonts
+Let's move straight on to look at properties for styling fonts. In this example, we'll apply some CSS properties to the following HTML sample:
+
+<h1>Tommy the cat</h1>
+
+<p>Well I remember it as though it were a meal ago…</p>
+
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
+Copy to Clipboard
+You can find the finished example on GitHub (see also the source code).
+
+Color
+The color property sets the color of the foreground content of the selected elements, which is usually the text, but can also include a couple of other things, such as an underline or overline placed on text using the text-decoration property.
+
+color can accept any CSS color unit, for example:
+
+p {
+  color: red;
+}
+Copy to Clipboard
+This will cause the paragraphs to become red, rather than the standard browser default of black, like so:"
+--https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals
