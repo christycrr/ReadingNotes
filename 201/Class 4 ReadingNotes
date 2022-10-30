@@ -1,0 +1,79 @@
+"A basic link is created by wrapping the text or other content, see Block level links, inside an <a> element and using the href attribute, also known as a Hypertext Reference, or target, that contains the web address.
+
+<p>
+  I'm creating a link to
+  <a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
+</p>
+Copy to Clipboard
+This gives us the following result:
+
+I'm creating a link to the Mozilla homepage."
+-https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
+
+<p>
+  I'm creating a link to
+  <a
+    href="https://www.mozilla.org/en-US/"
+    title="The best place to find more information about Mozilla's
+          mission and how to contribute">the Mozilla homepage</a>.
+</p>
+-https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
+Introduction to CSS layout
+This article will recap some of the CSS layout features we've already touched upon in previous modules — such as different display values — and introduce some of the concepts we'll be covering throughout this module.
+
+"Normal flow
+Elements on webpages lay themselves out according to normal flow - until we do something to change that. This article explains the basics of normal flow as a grounding for learning how to change it.
+
+Flexbox
+Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces. This article explains all the fundamentals. After studying this guide you can test your flexbox skills to check your understanding before moving on.
+
+Grids
+CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows and columns, and has many features that make building complex layouts straightforward. This article will give you all you need to know to get started with page layout, then test your grid skills before moving on.
+
+Floats
+Originally for floating images inside blocks of text, the float property became one of the most commonly used tools for creating multiple column layouts on webpages. With the advent of Flexbox and Grid it has now returned to its original purpose, as this article explains.
+
+Positioning
+Positioning allows you to take elements out of the normal document layout flow and make them behave differently, for example, by sitting on top of one another, or by always remaining in the same place inside the browser viewport. This article explains the different position values and how to use them.
+
+Multiple-column layout
+The multiple-column layout specification gives you a method of laying content out in columns, as you might see in a newspaper. This article explains how to use this feature.
+
+Responsive design
+As more diverse screen sizes have appeared on web-enabled devices, the concept of responsivc. It is an idea that changed the way we design for a multi-device web, and in this article we'll help you understand the main techniques you need to know to master it."
+-https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout
+"By default, a block level element's content fills the available inline space of the parent element containing it and grows along the block dimension to accommodate its content. The size of Inline elements is just the size of their content. You can't set width or height on inline elements — they just sit inside the content of block level elements. If you want to control the size of an inline element in this manner, you need to set it to behave like a block level element (e.g., with display: block; or display: inline-block;, which mixes characteristics from both).
+
+That explains how elements are structured individually, but how about the way they're structured when they interact with one another? The normal layout flow (mentioned in the layout introduction article) is the system by which elements are placed inside the browser's viewport. By default, block-level elements are laid out in the block flow direction, which is based on the parent's writing mode (initial: horizontal-tb). Each element will appear on a new line below the last one, with each one separated by whatever margin that's been specified. In English, for example, (or any other horizontal, top to bottom writing mode) block-level elements are laid out vertically."
+-https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow
+
+"This topic contains the following modules, in a suggested order for working through them.
+
+JavaScript first steps
+In our first JavaScript module, we first answer some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", before moving on to taking you through your first practical experience of writing JavaScript. After that, we discuss some key JavaScript features in detail, such as variables, strings, numbers and arrays.
+
+JavaScript building blocks
+In this module, we continue our coverage of all JavaScript's key fundamental features, turning our attention to commonly-encountered types of code block such as conditional statements, loops, functions, and events. You've seen this stuff already in the course, but only in passing — here we'll discuss it all explicitly.
+
+Introducing JavaScript objects
+In JavaScript, most things are objects, from core JavaScript features like strings and arrays to the browser APIs built on top of JavaScript. You can even create your own objects to encapsulate related functions and variables into efficient packages. The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you. Here we teach object theory and syntax in detail, look at how to create your own objects, and explain what JSON data is and how to work with it.
+
+Asynchronous JavaScript
+In this module we take a look at asynchronous JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
+
+Client-side web APIs
+When writing client-side JavaScript for web sites or applications, you won't go very far before you start to use APIs — interfaces for manipulating different aspects of the browser and operating system the site is running on, or even data from other web sites or services. In this module we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work."
+-https://developer.mozilla.org/en-US/docs/Learn/JavaScript
+
+"Built-in browser functions
+We've used functions built in to the browser a lot in this course.
+
+Every time we manipulated a text string, for example:
+
+const myText = 'I am a string';
+const newString = myText.replace('string', 'sausage');
+console.log(newString);
+// the replace() string function takes a source string,
+// and a target string and replaces the source string,
+// with the target string, and returns the newly formed string"
+-https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions
