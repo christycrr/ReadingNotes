@@ -1,0 +1,85 @@
+"As with many things in JavaScript, creating an object often begins with defining and initializing a variable. Try entering the following line below the JavaScript code that's already in your file, then saving and refreshing:
+
+const person = {};
+Copy to Clipboard
+Now open your browser's JavaScript console, enter person into it, and press Enter/Return. You should get a result similar to one of the below lines:
+
+[object Object]
+Object { }
+{ }
+Congratulations, you've just created your first object. Job done! But this is an empty object, so we can't really do much with it. Let's update the JavaScript object in our file to look like this:
+
+const person = {
+  name: ["Bob", "Smith"],
+  age: 32,
+  bio: function () {
+    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+  },
+  introduceSelf: function () {
+    console.log(`Hi! I'm ${this.name[0]}.`);
+  },
+};
+Copy to Clipboard
+After saving and refreshing, try entering some of the following into the JavaScript console on your browser devtools:
+
+person.name;
+person.name[0];
+person.age;
+person.bio();
+person.introduceSelf();"
+-https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
+
+"What is the DOM?
+The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+
+A web page is a document that can be either displayed in the browser window or as the HTML source. In both cases, it is the same document but the Document Object Model (DOM) representation allows it to be manipulated. As an object-oriented representation of the web page, it can be modified with a scripting language such as JavaScript.
+
+For example, the DOM specifies that the querySelectorAll method in this code snippet must return a list of all the <p> elements in the document:
+
+const paragraphs = document.querySelectorAll("p");
+// paragraphs[0] is the first <p> element
+// paragraphs[1] is the second <p> element, etc.
+alert(paragraphs[0].nodeName);"
+-https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+
+
+"Classifying JavaScript’s Eight Data Types
+JavaScript currently supports eight different data types. This includes seven primitive value types and objects. Here’s the full list.
+
+Boolean
+Null
+Undefined
+Number
+BigInt
+String
+Symbol
+Objects
+If you are new to JavaScript this list may look strange to you: arrays, functions, and dates are all missing.
+
+This isn’t a mistake. Arrays, functions, and dates all play an important role in JavaScript programs, but they are really just objects under the hood.
+
+The Difference Between a Value and a Reference
+Primitive values and object references are stored in JavaScript programs in different ways.
+
+When a primitive value is assigned to a variable (eg let foo = ‘bar’), the variable is set to that value directly.
+
+When the variable is assigned with an object, however, things are different. Instead of containing the value directly, that variable contains a reference to it. Here’s an example:
+
+const moe = {
+  name: 'Moe Szyslak',
+  occupation: 'Bartender',
+  voicedBy: 'Hank Azaria'
+}"
+-https://betterprogramming.pub/intermediate-javascript-whats-the-difference-between-primitive-values-and-object-references-e863d70677b
+
+
+"Read the problem completely twice.
+Solve the problem manually with 3 sets of sample data.
+Optimize the manual steps.
+Write the manual steps as comments or pseudo-code.
+Replace the comments or pseudo-code with real code.
+Optimize the real code.
+As much as 70% of our time should be spent in steps 1-3.
+
+Let’s look at each step."
+-https://simpleprogrammer.com/solving-problems-breaking-it-down/
