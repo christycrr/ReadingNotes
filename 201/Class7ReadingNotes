@@ -1,0 +1,206 @@
+"Object basics
+An object is a collection of related data and/or functionality. These usually consist of several variables and functions (which are called properties and methods when they are inside objects). Let's work through an example to understand what they look like.
+
+To begin with, make a local copy of our oojs.html file. This contains very little — a <script> element for us to write our source code into. We'll use this as a basis for exploring basic object syntax. While working with this example you should have your developer tools JavaScript console open and ready to type in some commands.
+
+As with many things in JavaScript, creating an object often begins with defining and initializing a variable. Try entering the following line below the JavaScript code that's already in your file, then saving and refreshing:
+
+const person = {};
+Copy to Clipboard
+Now open your browser's JavaScript console, enter person into it, and press Enter/Return. You should get a result similar to one of the below lines:
+
+[object Object]
+Object { }
+{ }
+Congratulations, you've just created your first object. Job done! But this is an empty object, so we can't really do much with it. Let's update the JavaScript object in our file to look like this:
+
+const person = {
+  name: ["Bob", "Smith"],
+  age: 32,
+  bio: function () {
+    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+  },
+  introduceSelf: function () {
+    console.log(`Hi! I'm ${this.name[0]}.`);
+  },
+};
+Copy to Clipboard
+After saving and refreshing, try entering some of the following into the JavaScript console on your browser devtools:
+
+person.name;
+person.name[0];
+person.age;
+person.bio();
+person.introduceSelf();"
+-https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
+
+"When should you NOT use HTML tables?
+HTML tables should be used for tabular data — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, e.g. one row to contain the header, one row to contain the content columns, one row to contain the footer, etc. You can find more details and an example at Page Layouts in our Accessibility Learning Module. This was commonly used because CSS support across browsers used to be terrible; table layouts are much less common nowadays, but you might still see them in some corners of the web.
+
+In short, using tables for layout rather than CSS layout techniques is a bad idea. The main reasons are as follows:
+
+Layout tables reduce accessibility for visually impaired users: screen readers, used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screen readers' output will be confusing to their users.
+Tables produce tag soup: As mentioned above, table layouts generally involve more complex markup structures than proper layout techniques. This can result in the code being harder to write, maintain, and debug.
+Tables are not automatically responsive: When you use proper layout containers (such as <header>, <section>, <article>, or <div>), their width defaults to 100% of their parent element. Tables on the other hand are sized according to their content by default, so extra measures are needed to get table layout styling to effectively work across a variety of devices.
+Active learning: Creating your first table
+We've talked table theory enough, so, let's dive into a practical example and build up a simple table.
+
+First of all, make a local copy of blank-template.html and minimal-table.css in a new directory on your local machine.
+The content of every table is enclosed by these two tags : <table></table>. Add these inside the body of your HTML.
+The smallest container inside a table is a table cell, which is created by a <td> element ('td' stands for 'table data'). Add the following inside your table tags:
+<td>Hi, I'm your first cell.</td>
+Copy to Clipboard
+If we want a row of four cells, we need to copy these tags three times. Update the contents of your table to look like so:
+<td>Hi, I'm your first cell.</td>
+<td>I'm your second cell.</td>
+<td>I'm your third cell.</td>
+<td>I'm your fourth cell.</td>
+Copy to Clipboard
+As you will see, the cells are not placed underneath each other, rather they are automatically aligned with each other on the same row. Each <td> element creates a single cell and together they make up the first row. Every cell we add makes the row grow longer.
+
+To stop this row from growing and start placing subsequent cells on a second row, we need to use the <tr> element ('tr' stands for 'table row'). Let's investigate this now.
+
+Place the four cells you've already created inside <tr> tags, like so:
+<tr>
+  <td>Hi, I'm your first cell.</td>
+  <td>I'm your second cell.</td>
+  <td>I'm your third cell.</td>
+  <td>I'm your fourth cell.</td>
+</tr>
+Copy to Clipboard
+Now you've made one row, have a go at making one or two more — each row needs to be wrapped in an additional <tr> element, with each cell contained in a <td>.
+Result
+This should result in a table that looks something like the following:"
+
+-https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics
+
+"Object basics
+An object is a collection of related data and/or functionality. These usually consist of several variables and functions (which are called properties and methods when they are inside objects). Let's work through an example to understand what they look like.
+
+To begin with, make a local copy of our oojs.html file. This contains very little — a <script> element for us to write our source code into. We'll use this as a basis for exploring basic object syntax. While working with this example you should have your developer tools JavaScript console open and ready to type in some commands.
+
+As with many things in JavaScript, creating an object often begins with defining and initializing a variable. Try entering the following line below the JavaScript code that's already in your file, then saving and refreshing:
+
+const person = {};
+Copy to Clipboard
+Now open your browser's JavaScript console, enter person into it, and press Enter/Return. You should get a result similar to one of the below lines:
+
+[object Object]
+Object { }
+{ }
+Congratulations, you've just created your first object. Job done! But this is an empty object, so we can't really do much with it. Let's update the JavaScript object in our file to look like this:
+
+const person = {
+  name: ["Bob", "Smith"],
+  age: 32,
+  bio: function () {
+    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+  },
+  introduceSelf: function () {
+    console.log(`Hi! I'm ${this.name[0]}.`);
+  },
+};"
+-https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics#introducing_constructors
+
+"You can't get very far in JavaScript without dealing with objects. They're foundational to almost every aspect of the JavaScript programming language. In fact, learning how to create objects is probably one of the first things you studied when you were starting out. With that said, in order to most effectively learn about prototypes in JavaScript, we're going to channel our inner Jr. developer and go back to the basics.
+
+Objects are key/value pairs. The most common way to create an object is with curly braces {} and you add properties and methods to an object using dot notation.
+
+let animal = {}
+animal.name = 'Leo'
+animal.energy = 10
+
+animal.eat = function (amount) {
+  console.log(`${this.name} is eating.`)
+  this.energy += amount
+}
+
+animal.sleep = function (length) {
+  console.log(`${this.name} is sleeping.`)
+  this.energy += length
+}
+
+animal.play = function (length) {
+  console.log(`${this.name} is playing.`)
+  this.energy -= length
+}
+Simple. Now odds are in our application we'll need to create more than one animal. Naturally, the next step for this would be to encapsulate that logic inside of a function that we can invoke whenever we needed to create a new animal. We'll call this pattern Functional Instantiation and we'll call the function itself a "constructor function" since it's responsible for "constructing" a new object.
+
+Functional Instantiation
+function Animal (name, energy) {
+  let animal = {}
+  animal.name = name
+  animal.energy = energy
+
+  animal.eat = function (amount) {
+    console.log(`${this.name} is eating.`)
+    this.energy += amount
+  }
+
+  animal.sleep = function (length) {
+    console.log(`${this.name} is sleeping.`)
+    this.energy += length
+  }
+
+  animal.play = function (length) {
+    console.log(`${this.name} is playing.`)
+    this.energy -= length
+  }
+
+  return animal
+}
+
+const leo = Animal('Leo', 7)
+const snoop = Animal('Snoop', 10)"
+-https://ui.dev/beginners-guide-to-javascript-prototype
+
+"Nesting Tables
+It is possible to nest a table inside another one, as long as you include the complete structure, including the <table> element. This is generally not really advised, as it makes the markup more confusing and less accessible to screen reader users, and in many cases you might as well just insert extra cells/rows/columns into the existing table. It is however sometimes necessary, for example if you want to import content easily from other sources.
+
+The following markup shows a simple nested table:
+
+<table id="table1">
+  <tr>
+    <th>title1</th>
+    <th>title2</th>
+    <th>title3</th>
+  </tr>
+  <tr>
+    <td id="nested">
+      <table id="table2">
+        <tr>
+          <td>cell1</td>
+          <td>cell2</td>
+          <td>cell3</td>
+        </tr>
+      </table>
+    </td>
+    <td>cell2</td>
+    <td>cell3</td>
+  </tr>
+  <tr>
+    <td>cell4</td>
+    <td>cell5</td>
+    <td>cell6</td>
+  </tr>
+</table>
+Copy to Clipboard
+The output of which looks something like this:
+
+
+Tables for visually impaired users
+Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, it takes only a short glance at the table below to find out how many rings were sold in Gent during August 2016. To understand its information we make visual associations between the data in this table and its column and/or row headers.
+
+Items Sold August 2016
+Clothes	Accessories
+Trousers	Skirts	Dresses	Bracelets	Rings
+Belgium	Antwerp	56	22	43	72	23
+Gent	46	18	50	61	15
+Brussels	51	27	38	69	28
+The Netherlands	Amsterdam	89	34	69	85	38
+Utrecht	80	12	43	36	19
+But what if you cannot make those visual associations? How then can you read a table like the above? Visually impaired people often use a screen reader that reads out information on web pages to them. This is no problem when you're reading plain text but interpreting a table can be quite a challenge for a blind person. Nevertheless, with the proper markup we can replace visual associations by programmatic ones."
+-https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced
+
+
+
