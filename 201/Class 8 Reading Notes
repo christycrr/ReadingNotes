@@ -1,0 +1,30 @@
+"Distributing space on the main axis #
+With the HTML used earlier, the flex items laid out as a row, there is space on the main axis. The items are not big enough to completely fill the flex container. The items line up at the start of the flex container because the initial value of justify-content is flex-start. The items line up at the start and any extra space is at the end.
+
+Add the justify-content property to the flex container, give it a value of flex-end, and the items line up at the end of the container and the spare space is placed at the start.
+
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+You can also distribute the space betwee"-https://web.dev/learn/css/flexbox/
+
+"Why Flexbox?
+For a long time, the only reliable cross-browser compatible tools available for creating CSS layouts were features like floats and positioning. These work, but in some ways they're also limiting and frustrating.
+
+The following simple layout designs are either difficult or impossible to achieve with such tools in any kind of convenient, flexible way:
+
+Vertically centering a block of content inside its parent.
+Making all the children of a container take up an equal amount of the available width/height, regardless of how much width/height is available.
+Making all columns in a multiple-column layout adopt the same height even if they contain a different amount of content.
+As you'll see in subsequent sections, flexbox makes a lot of layout tasks much easier. Let's dig in"
+-https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+
+"The display property does two things. The first thing it does is determine if the box it is applied to acts as inline or block.
+
+
+.my-element {
+  display: inline;
+}"
+-https://web.dev/learn/css/layout/
