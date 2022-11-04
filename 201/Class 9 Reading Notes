@@ -1,0 +1,203 @@
+"The different form controls
+Basic native form controls
+We start off this section by looking at the functionality of the original HTML <input> types in detail, looking at what options are available to collect different types of data.
+
+The HTML5 input types
+Here we continue our deep dive into the <input> element, looking at the additional input types provided when HTML5 was released, and the various UI controls and data collection enhancements they provide. Additionally, we look at the <output> element.
+
+Other form controls
+Next we take a look at all the non-<input> form controls and associated tools, such as <select>, <textarea>, <meter>, and <progress>.
+
+Form styling guides
+Styling web forms
+This article provides an introduction to styling forms with CSS, including all the basics you might need to know for basic styling tasks.
+
+Advanced form styling
+Here we look at some more advanced form styling techniques that need to be used when trying to deal with some of the more difficult-to-style form elements.
+
+UI pseudo-classes
+An introduction to the UI pseudo-classes enabling HTML form controls to be targeted based on their current state.
+
+Validating and submitting form data
+Client-side form validation
+Sending data is not enough — we also need to make sure that the data users enter into forms is in the correct format to process it successfully, and that it won't break our applications. We also want to help our users to fill out our forms correctly and not get frustrated when trying to use our apps. Form validation helps us achieve these goals — this article tells you what you need to know.
+
+Sending form data
+This article looks at what happens when a user submits a form — where does the data go, and how do we handle it when it gets there? We also look at some of the security concerns associated with sending form data.?
+-https://developer.mozilla.org/en-US/docs/Learn/Forms
+
+"Event index
+Event type	Description	Documentation
+Animation	
+Events related to the Web Animation API.
+
+Used to respond to changes in animation status (e.g. when an animation starts or ends).
+
+Animation events fired on Document, Window, HTMLElement.
+Asynchronous data fetching	
+Events related to the fetching data.
+
+Events fired on AbortSignal, XMLHttpRequest, FileReader.
+Clipboard	
+Events related to the Clipboard API.
+
+Used to notify when content is cut, copied, or pasted.
+
+Events fired on Document, Element, Window.
+Composition	
+Events related to composition; entering text "indirectly" (rather than using normal keyboard presses).
+
+For example, text entered via a speech to text engine, or using special key combinations that modify keyboard presses to represent new characters in another language.
+
+Events fired on Element.
+CSS transition	
+Events related to CSS Transitions.
+
+Provides notification events when CSS transitions start, stop, are cancelled, etc.
+
+Events fired on Document, HTMLElement, Window.
+Database	
+Events related to database operations: opening, closing, transactions, errors, etc.
+
+Events fired on IDBDatabase, IDBOpenDBRequest, IDBRequest, IDBTransaction.
+DOM mutation	
+Events related to modifications to the Document Object Model (DOM) hierarchy and nodes.
+
+Warning: Mutation Events are deprecated. Mutation Observers should be used instead.
+
+Drag'n'drop, Wheel	
+Events related to using the HTML Drag and Drop API and wheel events.
+
+Drag and Wheel events are derived from mouse events. While they are fired when using mouse wheel or drag/drop, they may also be used with other appropriate hardware.
+
+Drag events fired on Document
+
+Wheel events fired on Document and Element
+
+Focus	
+Events related to elements gaining and losing focus.
+
+Events fired on Element, Window.
+Form	
+Events related to forms being constructed, reset and submitted.
+
+Events fired on HTMLFormElement.
+Fullscreen	
+Events related to the Fullscreen API.
+
+Used to notify when the transitioning between full screen and windowed modes, and also of errors occurring during this transition.
+
+Events fired on Document, Element.
+Gamepad	
+Events related to the Gamepad API.
+
+Events fired on Window.
+Gestures	
+Touch events are recommended for implementing gestures.
+
+Events fired on Document, Element.
+
+In addition there are a number of non-standard gesture events:
+
+Non-standard WebKit specific events on Element: gesturestart event, gesturechange event, gestureend event.
+Non-standard IE specific events on Element: MSGestureStart, MSGestureChange, MSGestureEnd, MSGestureHold, MSGestureTap."
+-https://developer.mozilla.org/en-US/docs/Web/Events
+
+"E-mail address field
+This type of field is set using the value email for the type attribute:
+
+<input type="email" id="email" name="email" />
+Copy to Clipboard
+When this type is used, the user is required to type a valid email address into the field. Any other content causes the browser to display an error when the form is submitted. You can see this in action in the below screenshot.
+
+An invalid email input showing the message "Please enter an email address."
+You can also use the multiple attribute in combination with the email input type to allow several email addresses to be entered in the same input (separated by commas):
+
+<input type="email" id="email" name="email" multiple />"
+-https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types
+
+"Let's look at a simple example of what we mean here. In the following example, we have a single <button>, which when pressed, makes the background change to a random color:
+
+<button>Change color</button>
+Copy to Clipboard
+The JavaScript looks like so:
+
+const btn = document.querySelector('button');
+
+function random(number) {
+  return Math.floor(Math.random() * (number+1));
+}
+
+btn.addEventListener('click', () => {
+  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  document.body.style.backgroundColor = rndCol;
+});
+Copy to Clipboard
+In this code, we store a reference to the <button> element inside a constant called btn, using the Document.querySelector() function.
+
+We also define a function that returns a random number.
+
+The third part of the code is where we define and register the event handler. The <button> element has an event called 'click' that fires when the user clicks the button. Objects that can fire events have an addEventListener() method, that takes at least two arguments: the name of the event and a function to handle the event. So we call the button's addEventListener() method, passing in:
+
+the string 'click', to indicate that we want to listen to the click event
+a function to call when the event happens. In our case, the function generates a random RGB color and sets the page <body> background-color equal to that color."
+-https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+
+"JavaScript first steps
+In our first JavaScript module, we first answer some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", before moving on to taking you through your first practical experience of writing JavaScript. After that, we discuss some key JavaScript features in detail, such as variables, strings, numbers and arrays.
+
+JavaScript building blocks
+In this module, we continue our coverage of all JavaScript's key fundamental features, turning our attention to commonly-encountered types of code block such as conditional statements, loops, functions, and events. You've seen this stuff already in the course, but only in passing — here we'll discuss it all explicitly.
+
+Introducing JavaScript objects
+In JavaScript, most things are objects, from core JavaScript features like strings and arrays to the browser APIs built on top of JavaScript. You can even create your own objects to encapsulate related functions and variables into efficient packages. The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you. Here we teach object theory and syntax in detail, look at how to create your own objects, and explain what JSON data is and how to work with it.
+
+Asynchronous JavaScript
+In this module we take a look at asynchronous JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
+
+Client-side web APIs
+When writing client-side JavaScript for web sites or applications, you won't go very far before you start to use APIs — interfaces for manipulating different aspects of the browser and operating system the site is running on, or even data from other web sites or services. In this module we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work."
+-https://developer.mozilla.org/en-US/docs/Learn/JavaScript
+
+"The <fieldset> and <legend> elements
+The <fieldset> element is a convenient way to create groups of widgets that share the same purpose, for styling and semantic purposes. You can label a <fieldset> by including a <legend> element just below the opening <fieldset> tag. The text content of the <legend> formally describes the purpose of the <fieldset> it is included inside.
+
+Many assistive technologies will use the <legend> element as if it is a part of the label of each control inside the corresponding <fieldset> element. For example, some screen readers such as Jaws and NVDA will speak the legend's content before speaking the label of each control.
+
+Here is a little example:
+
+<form>
+  <fieldset>
+    <legend>Fruit juice size</legend>
+    <p>
+      <input type="radio" name="size" id="size_1" value="small" />
+      <label for="size_1">Small</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_2" value="medium" />
+      <label for="size_2">Medium</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_3" value="large" />
+      <label for="size_3">Large</label>
+    </p>
+  </fieldset>
+</form>"
+-https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form
+
+"What are web forms?
+Web forms are one of the main points of interaction between a user and a website or application. Forms allow users to enter data, which is generally sent to a web server for processing and storage (see Sending form data later in the module), or used on the client-side to immediately update the interface in some way (for example, add another item to a list, or show or hide a UI feature).
+
+A web form's HTML is made up of one or more form controls (sometimes called widgets), plus some additional elements to help structure the overall form — they are often referred to as HTML forms. The controls can be single or multi-line text fields, dropdown boxes, buttons, checkboxes, or radio buttons, and are mostly created using the <input> element, although there are some other elements to learn about too.
+
+Form controls can also be programmed to enforce specific formats or values to be entered (form validation), and paired with text labels that describe their purpose to both sighted and visually impaired users.
+
+Designing your form
+Before starting to code, it's always better to step back and take the time to think about your form. Designing a quick mockup will help you to define the right set of data you want to ask your user to enter. From a user experience (UX) point of view, it's important to remember that the bigger your form, the more you risk frustrating people and losing users. Keep it simple and stay focused: ask only for the data you absolutely need.
+
+Designing forms is an important step when you are building a site or application. It's beyond the scope of this article to cover the user experience of forms, but if you want to dig into that topic you should read the following articles:
+
+Smashing Magazine has some good articles about forms UX, including an older but still relevant Extensive Guide To Web Form Usability article.
+UXMatters is also a very thoughtful resource with good advice from basic best practices to complex concerns such as multipage forms."
+-https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form
+
